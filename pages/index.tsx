@@ -4,7 +4,7 @@ import { Calendar } from "../services/dates/dates.d";
 
 const Home = () => {
   const [year, setYear] = useState<number>(new Date().getFullYear());
-  const [calendar, setCalendar] = useState<Calendar | Object>(
+  const [calendar, setCalendar] = useState<Calendar>(
     setUpCalendar(year),
   );
 
