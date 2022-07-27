@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { setUpCalendar } from "../services/dates/dates";
-import { Calendar } from "../services/dates/dates.d";
+import { getDaysInMonth, setUpCalendar } from "../services/dates/dates";
+import { CalendarType } from "../services/dates/dates.d";
+import Calendar from "./calendar";
 
 const Home = () => {
   const [year, setYear] = useState<number>(new Date().getFullYear());
-  const [calendar, setCalendar] = useState<Calendar>(
+  const [calendar, setCalendar] = useState<CalendarType>(
     setUpCalendar(year),
   );
 
@@ -52,6 +53,9 @@ const Home = () => {
           </h1>
         </div>
       </div>
+      <Calendar
+        month={getDaysInMonth(new Date().getFullYear(), new Date().getMonth())}
+      />
       <footer className="mt-24 bg-gray-900 sm:mt-12">
         <div className="mx-auto max-w-md py-12 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
           <nav
