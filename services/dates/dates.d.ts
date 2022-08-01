@@ -2,6 +2,6 @@ export interface MonthDetails {
   totalDays: number;
   reminders: Object;
 }
-export interface Calendar {
+export interface CalendarType {
   [key: string]: MonthDetails;
 }

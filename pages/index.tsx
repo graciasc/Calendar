@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { setUpCalendar } from "../services/dates/dates";
-import { Calendar } from "../services/dates/dates.d";
+import {
+  getDaysInMonth,
+  getMonthName,
+  setUpCalendar,
+} from "../services/dates/dates";
+import { CalendarType } from "../services/dates/dates.d";
+import Calendar from "./calendar";
 
 const Home = () => {
   const [year, setYear] = useState<number>(new Date().getFullYear());
-  const [calendar, setCalendar] = useState<Calendar>(
+  const [days, setDays] = useState<number>(
+    getDaysInMonth(year, new Date().getMonth()),
+  );
+  const [month, setMonth] = useState<string>(
+    getMonthName(new Date().getMonth()),
+  );
+  const [calendar, setCalendar] = useState<CalendarType>(
     setUpCalendar(year),
   );
 
@@ -18,7 +29,9 @@ const Home = () => {
       <div className="text-white h-1/2 p-12 bg-gray-900">
         <div className="flex">
           <div className="flex-1 flex justify-between">
-            <h1 className="text-2xl font-light cursor-pointer">Calendar</h1>
+            <h1 className="text-2xl font-light cursor-pointer text-purple-400">
+              Calendar
+            </h1>
           </div>
           <div>
             <div className="flex text-lg">
@@ -31,7 +44,7 @@ const Home = () => {
               <i className="fa fa-instagram mx-3 mt-1"></i>
               <i className="fa fa-youtube mx-3 mt-1"></i>
               <i className="fa fa-facebook mx-3 mt-1"></i>
-              <h1 className="bg-white text-purple-300 px-2 py-1 -mt-1 mx-3 text-lg cursor-pointer">
+              <h1 className=" rounded-md bg-white text-gray-900 px-2 py-1 -mt-1 mx-3 text-lg cursor-pointer">
                 Feedback
               </h1>
             </div>
@@ -52,6 +65,12 @@ const Home = () => {
           </h1>
         </div>
       </div>
+
+      <Calendar
+        days={days}
+        month={month}
+        year={year}
+      />
       <footer className="mt-24 bg-gray-900 sm:mt-12">
         <div className="mx-auto max-w-md py-12 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
           <nav
