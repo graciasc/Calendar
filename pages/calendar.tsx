@@ -62,7 +62,7 @@ const Calendar = (props: CalendarProps) => {
   }];
 
   const handleCalendarLayout = () => {
-    const rows = Math.ceil(props.days / 7);
+    const rows = (Math.ceil(props.days / 7) + 1);
     let startDay = 1;
     return (
       <div className="h-full font-mono">
@@ -160,7 +160,8 @@ const Calendar = (props: CalendarProps) => {
                 //   })}
                 // </div>
               }
-              {[...Array(rows)].map((e, i) => {
+              {new Array(4).fill(rows).map((e, i) => {
+                console.log(i);
                 return (
                   <div className={`grid grid-rows-${rows} text-center `}>
                     <div className="grid grid-cols-7 box-content border-2 divide-x ">
