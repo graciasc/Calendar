@@ -8,7 +8,7 @@ import {
   UserIcon,
 } from "@heroicons/react/solid";
 
-const Calendar = (props) => {
+const Calendar = (props: any) => {
   const daysOfWeek = [
     "Sunday",
     "Monday",
