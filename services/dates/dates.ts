@@ -1,4 +1,4 @@
-import { Calendar } from "./dates.d";
+import { CalendarType } from "./dates.d";
 
 const MONTHS = 12;
 const monthTxt = [
@@ -24,7 +24,7 @@ function getMonthName(monthIndex: number): string {
   return monthTxt[monthIndex];
 }
 function setUpCalendar(year: number) {
-  const calendar: Calendar = {};
+  const calendar: CalendarType = {};
   for (let i = 0; i < MONTHS; i++) {
     calendar[i] = {
       totalDays: getDaysInMonth(year, i),
