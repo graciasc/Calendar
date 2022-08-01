@@ -62,8 +62,8 @@ const Calendar = (props: any) => {
     return (
       <div className="h-full font-mono">
         <div className="grid grid-row-2 w-full">
-          <div class="flex bg-gray-900">
-            <div class="w-1/2 flex justify-center">
+          <div className="flex bg-gray-900">
+            <div className="w-1/2 flex justify-center">
               <div className="flex">
                 <h1 className=" flex bold text-white text-2xl mx-2 mb-4 bold ">
                   Features
@@ -74,7 +74,7 @@ const Calendar = (props: any) => {
                 />
               </div>
             </div>
-            <div class="grid justify-center w-1/2">
+            <div className="grid justify-center w-1/2">
               <div className="flex">
                 <h1 className=" bold text-white mx-2 text-2xl mb-4 bold">
                   Calendar
