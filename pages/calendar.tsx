@@ -130,7 +130,7 @@ const Calendar = (props: any) => {
                             </div>
                             <div className="text-right text-sm whitespace-nowrap text-gray-500">
                               <time dateTime={event.datetime}>
-                                {event.date}
+                                {/* event.date */}
                               </time>
                             </div>
                           </div>
