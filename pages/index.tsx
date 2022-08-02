@@ -1,6 +1,6 @@
-import Header from "./components/header";
-import Footer from "./components/footer";
-import Section from "./components/section";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import Section from "../components/section";
 import React, { useEffect, useState } from "react";
 import {
   getDaysInMonth,
@@ -36,8 +36,9 @@ const Home = () => {
             This is a project idea from the
             <span className="border-white hover:text-purple-100 text-purple-200">
               <a href="https://github.com/florinpop17/app-ideas" /> app-ideas
+              {" "}
             </span>
-            repo
+            repo{" "}
             <span className="border-b-2 border-white hover:text-gray-200">
               <a href="https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Calendar-App.md">
                 github

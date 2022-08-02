@@ -1,5 +1,5 @@
 interface HeaderProps {
-  header: string[];
+  headers: string[];
 }
 const Header = (props: HeaderProps) => {
   return (
