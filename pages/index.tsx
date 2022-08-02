@@ -1,5 +1,6 @@
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Section from "./components/section";
 import React, { useEffect, useState } from "react";
 import {
   getDaysInMonth,
@@ -30,20 +31,20 @@ const Home = () => {
     <div className="bg-white h-screen">
       <div className="text-white h-1/2 p-12 bg-gray-900">
         <Header headers={["About", "Contact"]} />
-        <div className="p-24 flex justify-center">
+        <Section>
           <h1 className="text-3xl font-serif">
-            This is a project idea from the{" "}
+            This is a project idea from the
             <span className="border-white hover:text-purple-100 text-purple-200">
               <a href="https://github.com/florinpop17/app-ideas" /> app-ideas
-            </span>{" "}
-            repo{" "}
+            </span>
+            repo
             <span className="border-b-2 border-white hover:text-gray-200">
               <a href="https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Calendar-App.md">
                 github
               </a>
             </span>.
           </h1>
-        </div>
+        </Section>
       </div>
 
       <Calendar
