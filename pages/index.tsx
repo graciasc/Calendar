@@ -39,7 +39,7 @@ const Home = () => {
               {" "}
             </span>
             repo{" "}
-            <span className="border-b-2 border-white hover:text-gray-200">
+            <span className="pointer border-b-2 border-white hover:text-gray-200">
               <a href="https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Calendar-App.md">
                 github
               </a>
