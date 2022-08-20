@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <div className="bg-white h-screen">
-      <div className="text-white h-1/2 p-12 bg-gray-900">
+      <div className="text-white h-1/2 bg-gray-900">
         <Header headers={["About", "Contact"]} />
         <Section>
           <h1 className="text-3xl font-serif">
