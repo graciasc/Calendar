@@ -21,7 +21,7 @@ const Header = (
       </div>
       <div>
         <div className="flex text-lg">
-          {headers?.map((header) => {
+          {headers.length && headers.map((header) => {
             return (
               <h1 className="mx-2 border-b-2 border-transparent hover:border-white cursor-pointer">
                 {header}
