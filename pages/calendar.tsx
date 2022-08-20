@@ -27,7 +27,7 @@ const Calendar = (props: CalendarProps) => {
     id: 1,
     content: "Create Events",
     // target: "Front End Developer",
-    href: "#",
+    href: "https://github.com/graciasc/calendar/issues/30",
     // date: "Sep 20",
     datetime: "2020-09-20",
     icon: CogIcon,
@@ -36,7 +36,7 @@ const Calendar = (props: CalendarProps) => {
     id: 2,
     content: "Delete Events",
     // target: "Bethany Blake",
-    href: "#",
+    href: "https://github.com/graciasc/calendar/issues/28",
     // date: "Sep 22",
     datetime: "2020-09-22",
     icon: CogIcon,
@@ -45,7 +45,7 @@ const Calendar = (props: CalendarProps) => {
     id: 3,
     content: "Light/Dark Mode",
     // target: "Bethany Blake",
-    href: "#",
+    href: "https://github.com/graciasc/calendar/issues/29",
     // date: "Sep 22",
     datetime: "2020-09-22",
     icon: CogIcon,
@@ -54,7 +54,7 @@ const Calendar = (props: CalendarProps) => {
     id: 4,
     content: "Edit Events",
     // target: "Bethany Blake",
-    href: "#",
+    href: "https://github.com/graciasc/calendar/issues/27",
     // date: "Sep 22",
     datetime: "2020-09-22",
     icon: CogIcon,
@@ -114,10 +114,12 @@ const Calendar = (props: CalendarProps) => {
                                 "h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white",
                               )}
                             >
-                              <event.icon
-                                className="h-5 w-5 text-white"
-                                aria-hidden="true"
-                              />
+                              <a href={`${event.href}`}>
+                                <event.icon
+                                  className="h-5 w-5 text-white"
+                                  aria-hidden="true"
+                                />
+                              </a>
                             </span>
                           </div>
                           <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
@@ -146,43 +148,43 @@ const Calendar = (props: CalendarProps) => {
                 </ul>
               </div>
             </div>
-
             <div className="text-sm  pt-2 w-1/2 grid justify-center ">
-              {
-                // <h1 className="grid justify-center mb-4  text-xl ">
-                //   {props.month} {props.year}
-                // </h1>
-              }
-              {
-                // <div className="grid grid-cols-7">
-                //   {daysOfWeek.map((day) => {
-                //     return <h1 className="flex justify-center">{day[0]}</h1>;
-                //   })}
-                // </div>
-              }
-              {new Array(4).fill(rows).map((e, i) => {
-                console.log(i);
-                return (
-                  <div className={`grid grid-rows-${rows} text-center `}>
-                    <div className="grid grid-cols-7 box-content border-2 divide-x ">
-                      {daysOfWeek.map((day) => {
-                        return (
-                          <div
-                            style={{ width: "max-content" }}
-                            className="justify-items-end items-center container grid p-4"
-                          >
-                            <h1 className="">
-                              <span>
-                                {startDay > 30 ? startDay = 1 : startDay++}
-                              </span>
-                            </h1>
-                          </div>
-                        );
-                      })}
+              <a href="/calendarPage">
+                {
+                  // <h1 className="grid justify-center mb-4  text-xl ">
+                  //   {props.month} {props.year}
+                  // </h1>
+                }
+                {
+                  // <div className="grid grid-cols-7">
+                  //   {daysOfWeek.map((day) => {
+                  //     return <h1 className="flex justify-center">{day[0]}</h1>;
+                  //   })}
+                  // </div>
+                }
+                {new Array(4).fill(rows).map((e, i) => {
+                  return (
+                    <div className={`grid grid-rows-${rows} text-center `}>
+                      <div className="grid grid-cols-7 box-content border-2 divide-x ">
+                        {daysOfWeek.map((day) => {
+                          return (
+                            <div
+                              style={{ width: "max-content" }}
+                              className="justify-items-end items-center container grid p-4"
+                            >
+                              <h1 className="">
+                                <span>
+                                  {startDay > 30 ? startDay = 1 : startDay++}
+                                </span>
+                              </h1>
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </a>
             </div>
           </div>
         </div>
