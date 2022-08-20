@@ -1,9 +1,9 @@
 import { ExclamationIcon, MoonIcon } from "@heroicons/react/solid";
 
 interface HeaderProps {
-  headers: string[];
-  showFeedback: boolean;
-  darkModeIconColor: string;
+  headers?: string[];
+  showFeedback?: boolean;
+  darkModeIconColor?: string;
 }
 
 const Header = (
@@ -29,7 +29,7 @@ const Header = (
             );
           })}
 
-          <button className="mx-2" href="">
+          <button className="mx-2">
             <MoonIcon
               className={`h-5 w-5 ${darkModeIconColor}`}
               aria-hidden="true"
