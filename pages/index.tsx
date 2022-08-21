@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <div className="bg-white h-screen">
-      <div className="text-white h-1/2 p-12 bg-gray-900">
+      <div className="text-white h-1/2 bg-gray-900">
         <Header headers={["About", "Contact"]} />
         <Section>
           <h1 className="text-3xl font-serif">
@@ -39,7 +39,7 @@ const Home = () => {
               {" "}
             </span>
             repo{" "}
-            <span className="border-b-2 border-white hover:text-gray-200">
+            <span className="pointer border-b-2 border-white hover:text-gray-200">
               <a href="https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Calendar-App.md">
                 github
               </a>
