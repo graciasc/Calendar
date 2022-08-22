@@ -164,7 +164,9 @@ const Calendar = (props: CalendarProps) => {
                 }
                 {new Array(4).fill(rows).map((e, i) => {
                   return (
-                    <div className={`grid grid-rows-${rows} text-center `}>
+                    <div
+                      className={`grid grid-rows-${rows} text-center `}
+                    >
                       <div className="grid grid-cols-7 box-content border-2 divide-x ">
                         {daysOfWeek.map((day) => {
                           return (

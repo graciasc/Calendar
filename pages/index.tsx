@@ -28,10 +28,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-white h-screen">
+    <div className=" bg-white h-screen">
       <div className="text-white h-1/2 bg-gray-900">
         <Header headers={["About", "Contact"]} />
-        <Section>
+        <Section className="dark:bg-black">
           <h1 className="text-3xl font-serif">
             This is a project idea from the
             <span className="border-white hover:text-purple-100 text-purple-200">
